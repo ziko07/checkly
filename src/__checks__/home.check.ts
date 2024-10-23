@@ -22,16 +22,6 @@ new BrowserCheck('homepage-browser-check', {
   runParallel: true,
 })
 
-new BrowserCheck('homepage-browser-check', {
-  name: 'Home page2',
-  alertChannels,
-  group: websiteGroup,
-  code: {
-    entrypoint: path.join(__dirname, 'homepage2.spec.ts')
-  },
-  runParallel: true,
-})
-
 new BrowserCheck('login-browser-check', {
   name: 'Login Check',
   alertChannels,
