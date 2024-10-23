@@ -5,6 +5,7 @@
 */
 
 import { BrowserCheck, Frequency, RetryStrategyBuilder } from 'checkly/constructs'
+import {websiteGroup} from "./website-group.check";
 
 new BrowserCheck('life-rapidfire', {
   name: 'life_rapidfire',
@@ -13,6 +14,7 @@ new BrowserCheck('life-rapidfire', {
   shouldFail: false,
   runParallel: true,
   locations: [],
+  group: websiteGroup,
   tags: [],
   sslCheckDomain: '',
   frequency: Frequency.EVERY_10M,
